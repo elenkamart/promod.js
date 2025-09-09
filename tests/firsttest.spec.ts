@@ -30,7 +30,11 @@ test ('Add to Cart', async ({page}) => {
      await page.waitForTimeout(5000);
      expect(await page.waitForURL('https://www.promod.com/en/plain-crossover-blazer-ecru--p203445/'));
      await page.locator('div[class="pmd-slidingLayer pmd-sizeSelector"]').click();
-     await page.locator('span[class="pmd-productSize_thumbnail"]').click();
+     await page.getByRole('button', {name: '42'}).click();
+     await page.getByLabel('Add to shopping cart').click();
+     
+
+
      
      
    
